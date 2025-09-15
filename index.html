@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Любовное признание для Марии</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .card {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            height: 600px;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+        
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+        
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .card-front {
+            background: linear-gradient(45deg, #ff758c 0%, #ff7eb3 100%);
+            color: white;
+        }
+        
+        .card-back {
+            background: white;
+            color: #333;
+            transform: rotateY(180deg);
+            overflow-y: auto;
+        }
+        
+        .heart {
+            font-size: 100px;
+            color: white;
+            margin-bottom: 30px;
+            animation: heartbeat 1.5s infinite;
+        }
+        
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff4081;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .signature {
+            margin-top: 30px;
+            font-style: italic;
+            align-self: flex-end;
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            5% { transform: scale(1.1); }
+            10% { transform: scale(1); }
+            15% { transform: scale(1.1); }
+            20% { transform: scale(1); }
+            100% { transform: scale(1); }
+        }
+        
+        .instructions {
+            position: absolute;
+            bottom: 20px;
+            color: white;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-inner">
+            <div class="card-front">
+                <div class="heart">❤️</div>
+                <h1>Для самой особенной</h1>
+                <p>Наведи курсор или коснись, чтобы открыть</p>
+                <div class="instructions">(Наведи на открытку, чтобы перевернуть)</div>
+            </div>
+            <div class="card-back">
+                <h1>Моей дорогой <span class="name">Марии</span></h1>
+                <p>С того момента, как ты появилась в моей жизни, всё изменилось к лучшему.</p>
+                <p>Твоя улыбка заставляет мое сердце биться чаще, твой смех — самая прекрасная музыка, а твои глаза — это бездонные океаны, в которых я готов потеряться.</p>
+                <p>Каждый день с тобой — это подарок судьбы, который я ценю больше всего на свете.</p>
+                <p>Я люблю тебя не только за то, кто ты есть, но и за то, кем я становлюсь, когда я рядом с тобой.</p>
+                <p>Ты вдохновляешь меня становиться лучше каждый день.</p>
+                <p>С тобой я понял, что такое настоящее счастье.</p>
+                <p class="signature">С любовью, твой воздыхатель</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
